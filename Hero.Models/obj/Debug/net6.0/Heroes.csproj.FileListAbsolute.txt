@@ -1,0 +1,17 @@
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Heroes.deps.json
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Heroes.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Heroes.pdb
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Interfaces.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Interfaces.pdb
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.csproj.AssemblyReference.cache
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.AssemblyInfoInputs.cache
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.AssemblyInfo.cs
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.csproj.CoreCompileInputs.cache
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.csproj.CopyComplete
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\refint\Heroes.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\Heroes.pdb
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\obj\Debug\net6.0\ref\Heroes.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Monsters.dll
+D:\Vtu- Software engineering\OOP\RPG-Game\Hero.Models\bin\Debug\net6.0\Monsters.pdb

@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Storages/1.0.0": {
+        "dependencies": {
+          "Actions": "1.0.0",
+          "Heroes": "1.0.0",
+          "Monsters": "1.0.0"
+        },
+        "runtime": {
+          "Storages.dll": {}
+        }
+      },
+      "Actions/1.0.0": {
+        "dependencies": {
+          "Heroes": "1.0.0",
+          "Monsters": "1.0.0"
+        },
+        "runtime": {
+          "Actions.dll": {}
+        }
+      },
+      "Heroes/1.0.0": {
+        "dependencies": {
+          "Interfaces": "1.0.0",
+          "Monsters": "1.0.0"
+        },
+        "runtime": {
+          "Heroes.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "runtime": {
+          "Interfaces.dll": {}
+        }
+      },
+      "Monsters/1.0.0": {
+        "dependencies": {
+          "Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "Monsters.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Storages/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Actions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Heroes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Monsters/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
