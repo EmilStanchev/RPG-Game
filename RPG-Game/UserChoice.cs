@@ -5,6 +5,8 @@ namespace RPG_Game
 {
     public static class UserChoice
     {
+        public static Dictionary<int, string> Choices = new Dictionary<int, string>();
+
         public static int PickOption()
         {
             int input = 0;
@@ -33,16 +35,16 @@ namespace RPG_Game
             }
             return input;
         }
-        public static void FirstOption(int option)
+        public static BaseHero FirstOption(int option)
         {
-            //Check(option);
             switch (option)
             {
                 case 1:
                     Console.WriteLine("Pick your hero name. It should be at least 3 symbols");
                     string name = Console.ReadLine();
-                    var hero = CreateHero(name, CheckHeroName(name));
-                    break;
+                    bool isItCorrect = CheckHeroName(name);
+                    BaseHero hero = CreateHero(name, isItCorrect);
+                    return hero;
                 case 2:
                     StartMenu.Tutorial();
                     break;
@@ -50,6 +52,27 @@ namespace RPG_Game
                     Environment.Exit(0);
                     break;
             }
+            return null;
+        }
+        public static void ChooseClass(int option, BaseHero hero)
+        {
+            Console.WriteLine("HP before the trasnofrmation" + hero.HP);
+            switch (option)
+            {
+                case 1:
+                    hero = new Mage(hero.Name);
+                    Console.WriteLine(hero.HP);
+                    break;
+                case 2:
+                    hero = new Warrior(hero.Name);
+                    Console.WriteLine(hero.HP);
+                    break;
+                case 3:
+                    hero = new Archer(hero.Name);
+                    Console.WriteLine(hero.HP);
+                    break;
+            }
+            HeroStorage.Heroes.Add(hero);
         }
         private static bool CheckHeroName(string name)
         {
@@ -68,18 +91,21 @@ namespace RPG_Game
         {
             while (isItCorrect == false)
             {
-                if (CheckHeroName(name))
+                if (CheckHeroName(name) == true)
                 {
-                    BaseHero hero = new BaseHero(name);
-                    HeroStorage.Heroes.Add(hero);
                     isItCorrect = true;
-                    return hero;
                 }
                 else
                 {
                     Console.WriteLine("The name should have at least 3 symbols. ");
                     name = Console.ReadLine();
                 }
+            }
+            if (isItCorrect == true)
+            {
+                BaseHero hero = new BaseHero(name);
+                Console.WriteLine("it enters in the if");
+                return hero;
             }
             return null;
         }

@@ -4,8 +4,8 @@
     {
         public Warrior(string name) : base(name)
         {
-            this.Strength = 170;
-            this.HP = 40;
+            this.Strength = 40;
+            this.HP = 170;
         }
     }
 }

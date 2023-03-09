@@ -20,5 +20,15 @@
             "your hero HP and Strenght will increase. If you beat all the monster u win. Have fun and don`t leave without give the" +
             "head of the last monster. Good luck and watch out.");
         }
+        public static void ChooseClassText()
+        {
+            Console.WriteLine("Welcome to the King`s Bounty!");
+            Console.WriteLine("Select one option:");
+            Console.WriteLine("1: Mage");
+            Console.WriteLine("2. Warrior");
+            Console.WriteLine("3. Archer");
+            Console.WriteLine("4. Exit");
+
+        }
     }
 }
