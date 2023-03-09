@@ -1,4 +1,5 @@
-﻿using Heroes.Models;
+﻿using Actions;
+using Heroes.Models;
 using Storages;
 
 namespace RPG_Game
@@ -54,7 +55,7 @@ namespace RPG_Game
             }
             return null;
         }
-        public static void ChooseClass(int option, BaseHero hero)
+        public static BaseHero ChooseClass(int option, BaseHero hero)
         {
             Console.WriteLine("HP before the trasnofrmation" + hero.HP);
             switch (option)
@@ -73,6 +74,32 @@ namespace RPG_Game
                     break;
             }
             HeroStorage.Heroes.Add(hero);
+            return hero;
+        }
+        public static void Gameplay(int option, BaseHero hero)
+        {
+            while (option != 5)
+            {
+                switch (option)
+                {
+                    case 1:
+                        StartMenu.Attack();
+                        break;
+                    case 2:
+                        HeroAction.GetSmallPotion(hero);
+                        break;
+                    case 3:
+                        HeroAction.GetMediumPotion(hero);
+                        break;
+                    case 4:
+                        HeroAction.GetBigPotion(hero);
+                        break;
+                    case 5:
+                        Environment.Exit(0);
+                        break;
+                }
+                option = int.Parse(Console.ReadLine());
+            }
         }
         private static bool CheckHeroName(string name)
         {

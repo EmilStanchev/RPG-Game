@@ -28,7 +28,24 @@
             Console.WriteLine("2. Warrior");
             Console.WriteLine("3. Archer");
             Console.WriteLine("4. Exit");
-
+        }
+        public static void GameplayText()
+        {
+            Console.WriteLine("Select one option:");
+            Console.WriteLine("1: Attack");
+            Console.WriteLine("2. Get small potion");
+            Console.WriteLine("3. Get medium potion");
+            Console.WriteLine("4. Get big potion");
+            Console.WriteLine("5. Exit");
+        }
+        public static void Attack()
+        {
+            Console.WriteLine("Attack:");
+            Console.WriteLine("1: Rat");
+            Console.WriteLine("2. Wolf");
+            Console.WriteLine("3. Bear");
+            Console.WriteLine("4. Dragon");
+            Console.WriteLine("5. Exit");
         }
     }
 }

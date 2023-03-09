@@ -4,7 +4,7 @@
     {
         public Archer(string name) : base(name)
         {
-            this.Strength = 110;
+            this.Strength = 35;
             this.HP = 90;
         }
     }

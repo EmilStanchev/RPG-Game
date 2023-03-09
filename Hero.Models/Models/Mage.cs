@@ -4,7 +4,7 @@
     {
         public Mage(string name) : base(name)
         {
-            this.Strength = 85;
+            this.Strength = 25;
             this.HP = 110;
         }
     }

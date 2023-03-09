@@ -34,18 +34,39 @@ namespace Heroes.HeroActions
         }
         public static void GetSmallPotion(BaseHero hero)
         {
-            hero.Money -= 18;
-            hero.HP += 25;
+            if (hero.Money >= 18)
+            {
+                hero.Money -= 18;
+                hero.HP += 25;
+            }
+            else
+            {
+                Console.WriteLine("You don`t have enough money");
+            }
         }
         public static void GetMediumPotion(BaseHero hero)
         {
-            hero.Money -= 22;
-            hero.HP += 35;
+            if (hero.Money >= 22)
+            {
+                hero.Money -= 22;
+                hero.HP += 35;
+            }
+            else
+            {
+                Console.WriteLine("You don`t have enough money");
+            }
         }
         public static void GetBigPotion(BaseHero hero)
         {
-            hero.Money -= 40;
-            hero.HP += 55;
+            if (hero.Money >= 40)
+            {
+                hero.Money -= 40;
+                hero.HP += 55;
+            }
+            else
+            {
+                Console.WriteLine("You don`t have enough money");
+            }
         }
     }
 }
