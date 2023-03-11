@@ -10,10 +10,7 @@ namespace Heroes.HeroActions
             while (hero.HP >= 0 && monster.HP >= 0)
             {
                 monster.HP -= hero.Strength;
-                Console.WriteLine($"{monster.Name} attack {hero.Name} for {monster.Strength}");
                 hero.HP -= monster.Strength;
-                Console.WriteLine($"{hero.Name} attack {monster.Name} for {hero.Strength}");
-
             }
             if (hero.HP > monster.HP)
             {
@@ -24,7 +21,9 @@ namespace Heroes.HeroActions
             }
             else
             {
-                Console.WriteLine($"{monster.Name} won!");
+                Console.WriteLine($"{monster.Name} won!And you lost the game. You can try again. Restart the game");
+                Environment.Exit(0);
+
             }
         }
         public static void CheckInfoForHero(BaseHero hero)

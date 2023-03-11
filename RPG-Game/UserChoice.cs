@@ -1,5 +1,6 @@
-﻿using Actions;
+﻿using Heroes.HeroActions;
 using Heroes.Models;
+using Monsters.Models;
 using Storages;
 
 namespace RPG_Game
@@ -8,16 +9,18 @@ namespace RPG_Game
     {
         public static Dictionary<int, string> Choices = new Dictionary<int, string>();
 
-        public static int PickOption()
+        public static int PickOption(int maxValue)
         {
             int input = 0;
-            try
+            bool isItCorrect = false;
+            while (isItCorrect == false)
             {
-                bool isItCorrect = false;
-                input = int.Parse(Console.ReadLine());
-                while (isItCorrect == false)
+                try
                 {
-                    if (input >= 1 && input <= 3)
+                    input = int.Parse(Console.ReadLine());
+                    isItCorrect = false;
+                    Console.WriteLine(input);
+                    if (input >= 0 && input <= maxValue)
                     {
                         isItCorrect = true;
                     }
@@ -27,37 +30,42 @@ namespace RPG_Game
                         input = int.Parse(Console.ReadLine());
                     }
                 }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Option can be from 1 to 3");
-                input = int.Parse(Console.ReadLine());
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Option can be from 1 to 3");
+                }
             }
             return input;
         }
         public static BaseHero FirstOption(int option)
         {
-            switch (option)
+            while (option != 1)
             {
-                case 1:
-                    Console.WriteLine("Pick your hero name. It should be at least 3 symbols");
-                    string name = Console.ReadLine();
-                    bool isItCorrect = CheckHeroName(name);
-                    BaseHero hero = CreateHero(name, isItCorrect);
-                    return hero;
-                case 2:
-                    StartMenu.Tutorial();
-                    break;
-                case 3:
-                    Environment.Exit(0);
-                    break;
+                switch (option)
+                {
+                    case 2:
+                        StartMenu.Tutorial();
+                        break;
+                    case 3:
+                        Environment.Exit(0);
+                        break;
+                }
+                StartMenu.StartMenuText();
+                option = int.Parse(Console.ReadLine());
+            }
+            Console.Clear();
+            if (option == 1)
+            {
+                Console.WriteLine("Pick your hero name. It should be at least 3 symbols");
+                string name = Console.ReadLine();
+                bool isItCorrect = CheckHeroName(name);
+                BaseHero hero = CreateHero(name, isItCorrect);
+                return hero;
             }
             return null;
         }
         public static BaseHero ChooseClass(int option, BaseHero hero)
         {
-            Console.WriteLine("HP before the trasnofrmation" + hero.HP);
             switch (option)
             {
                 case 1:
@@ -72,18 +80,25 @@ namespace RPG_Game
                     hero = new Archer(hero.Name);
                     Console.WriteLine(hero.HP);
                     break;
+                case 4:
+                    Environment.Exit(0);
+                    break;
             }
             HeroStorage.Heroes.Add(hero);
             return hero;
         }
         public static void Gameplay(int option, BaseHero hero)
         {
-            while (option != 5)
+            while (option != 6)
             {
+
                 switch (option)
                 {
                     case 1:
                         StartMenu.Attack();
+                        option = PickOption(5);
+                        var monster = GetTheMonster(option);
+                        HeroAction.Attack(hero, monster);
                         break;
                     case 2:
                         HeroAction.GetSmallPotion(hero);
@@ -95,11 +110,40 @@ namespace RPG_Game
                         HeroAction.GetBigPotion(hero);
                         break;
                     case 5:
+                        HeroAction.CheckInfoForHero(hero);
+                        break;
+                    case 6:
                         Environment.Exit(0);
                         break;
                 }
+                StartMenu.GameplayText();
                 option = int.Parse(Console.ReadLine());
+
             }
+            Console.Clear();
+        }
+        private static Monster GetTheMonster(int option)
+        {
+
+            switch (option)
+            {
+                case 1:
+                    var currentMonster = MonsterStorage.Monsters.SingleOrDefault(m => m.Name == "Rat");
+                    return currentMonster;
+                case 2:
+                    currentMonster = MonsterStorage.Monsters.SingleOrDefault(m => m.Name == "Wolf");
+                    return currentMonster;
+                case 3:
+                    currentMonster = MonsterStorage.Monsters.SingleOrDefault(m => m.Name == "Bear");
+                    return currentMonster;
+                case 4:
+                    currentMonster = MonsterStorage.Monsters.SingleOrDefault(m => m.Name == "Dragon");
+                    return currentMonster;
+                case 5:
+                    Environment.Exit(0);
+                    break;
+            }
+            return null;
         }
         private static bool CheckHeroName(string name)
         {

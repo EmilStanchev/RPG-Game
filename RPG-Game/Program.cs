@@ -2,14 +2,17 @@
 
 using Heroes.Models;
 using RPG_Game;
-// changed the values of the hero classes 
+//I changed the values of the strength and HP, and I added new logic to the methods about potions
 
 StartMenu.StartMenuText();
-int option = UserChoice.PickOption();
+int option = UserChoice.PickOption(3);
+Console.Clear();
 BaseHero hero = UserChoice.FirstOption(option);
+Console.Clear();
 StartMenu.ChooseClassText();
-option = UserChoice.PickOption();
+option = UserChoice.PickOption(4);
 hero = UserChoice.ChooseClass(option, hero);
+Console.Clear();
 StartMenu.GameplayText();
-option = UserChoice.PickOption();
+option = UserChoice.PickOption(6);
 UserChoice.Gameplay(option, hero);

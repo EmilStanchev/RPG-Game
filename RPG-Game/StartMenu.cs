@@ -36,7 +36,9 @@
             Console.WriteLine("2. Get small potion");
             Console.WriteLine("3. Get medium potion");
             Console.WriteLine("4. Get big potion");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Show hero info");
+            Console.WriteLine("6. Exit");
+
         }
         public static void Attack()
         {
@@ -46,6 +48,7 @@
             Console.WriteLine("3. Bear");
             Console.WriteLine("4. Dragon");
             Console.WriteLine("5. Exit");
+
         }
     }
 }
