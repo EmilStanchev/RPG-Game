@@ -33,11 +33,9 @@
         {
             Console.WriteLine("Select one option:");
             Console.WriteLine("1: Attack");
-            Console.WriteLine("2. Get small potion");
-            Console.WriteLine("3. Get medium potion");
-            Console.WriteLine("4. Get big potion");
-            Console.WriteLine("5. Show hero info");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("2. Shop");
+            Console.WriteLine("3. Show hero info");
+            Console.WriteLine("4. Exit");
 
         }
         public static void Attack()

@@ -5,7 +5,7 @@ namespace Storages
 {
     public static class MonsterStorage
     {
-        public static List<Monster> Monsters { get; set; } = StorageAction.CreatingMonster();
+        public static List<Monster> Monsters { get; set; } = StorageAction.AllMonsters();
 
     }
 }

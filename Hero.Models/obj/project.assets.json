@@ -24,6 +24,19 @@
         "runtime": {
           "bin/placeholder/Monsters.dll": {}
         }
+      },
+      "Shop/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.dll": {}
+        }
       }
     }
   },
@@ -37,12 +50,18 @@
       "type": "project",
       "path": "../Monsters/Monsters.csproj",
       "msbuildProject": "../Monsters/Monsters.csproj"
+    },
+    "Shop/1.0.0": {
+      "type": "project",
+      "path": "../Shop/Shop.csproj",
+      "msbuildProject": "../Shop/Shop.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Interfaces >= 1.0.0",
-      "Monsters >= 1.0.0"
+      "Monsters >= 1.0.0",
+      "Shop >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -77,6 +96,9 @@
             },
             "D:\\Vtu- Software engineering\\OOP\\RPG-Game\\Monsters\\Monsters.csproj": {
               "projectPath": "D:\\Vtu- Software engineering\\OOP\\RPG-Game\\Monsters\\Monsters.csproj"
+            },
+            "D:\\Vtu- Software engineering\\OOP\\RPG-Game\\Shop\\Shop.csproj": {
+              "projectPath": "D:\\Vtu- Software engineering\\OOP\\RPG-Game\\Shop\\Shop.csproj"
             }
           }
         }

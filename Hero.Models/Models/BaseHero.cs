@@ -36,10 +36,7 @@ namespace Heroes.Models
         }
         private void CheckHP(BaseHero hero)
         {
-            if (hero.HP)
-            {
 
-            }
         }
 
     }

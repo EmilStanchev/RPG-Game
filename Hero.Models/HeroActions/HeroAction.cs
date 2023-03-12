@@ -1,5 +1,6 @@
 ﻿using Heroes.Models;
 using Monsters.Models;
+using Shop.Models;
 
 namespace Heroes.HeroActions
 {
@@ -31,40 +32,27 @@ namespace Heroes.HeroActions
             Console.WriteLine($"Hero with name: {hero.Name} has {hero.Experience} experience points, {hero.Money} gold" +
                 $", and he is {hero.Level} level. He has {hero.HP} HP");
         }
-        public static void GetSmallPotion(BaseHero hero)
+        public static void BuyPotion(BaseHero hero, Potion potion)
         {
-            if (hero.Money >= 18)
+            if (CheckMoney(hero, potion))
             {
-                hero.Money -= 18;
-                hero.HP += 25;
+                hero.Money -= potion.Price;
+                hero.HP += potion.HP;
             }
             else
             {
                 Console.WriteLine("You don`t have enough money");
             }
         }
-        public static void GetMediumPotion(BaseHero hero)
+        private static bool CheckMoney(BaseHero hero, BaseShopModel shopModel)
         {
-            if (hero.Money >= 22)
+            if (hero.Money >= shopModel.Price)
             {
-                hero.Money -= 22;
-                hero.HP += 35;
+                return true;
             }
             else
             {
-                Console.WriteLine("You don`t have enough money");
-            }
-        }
-        public static void GetBigPotion(BaseHero hero)
-        {
-            if (hero.Money >= 40)
-            {
-                hero.Money -= 40;
-                hero.HP += 55;
-            }
-            else
-            {
-                Console.WriteLine("You don`t have enough money");
+                return false;
             }
         }
     }
