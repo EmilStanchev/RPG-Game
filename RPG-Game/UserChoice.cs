@@ -52,8 +52,8 @@ namespace RPG_Game
                 }
                 StartMenu.StartMenuText();
                 option = int.Parse(Console.ReadLine());
+                Console.Clear();
             }
-            Console.Clear();
             if (option == 1)
             {
                 Console.WriteLine("Pick your hero name. It should be at least 3 symbols");
@@ -70,15 +70,12 @@ namespace RPG_Game
             {
                 case 1:
                     hero = new Mage(hero.Name);
-                    Console.WriteLine(hero.HP);
                     break;
                 case 2:
                     hero = new Warrior(hero.Name);
-                    Console.WriteLine(hero.HP);
                     break;
                 case 3:
                     hero = new Archer(hero.Name);
-                    Console.WriteLine(hero.HP);
                     break;
                 case 4:
                     Environment.Exit(0);

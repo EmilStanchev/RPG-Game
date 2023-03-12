@@ -1,6 +1,5 @@
 ﻿using Heroes.HeroActions;
 using Interfaces.HeroInterfaces;
-using Monsters.Models;
 
 namespace Heroes.Models
 {
@@ -19,10 +18,6 @@ namespace Heroes.Models
         public virtual int Experience { get; set; }
         public virtual int Level { get; set; }
         public virtual decimal Money { get; set; }
-        public void Attack(BaseHero hero, Monster monster)
-        {
-            HeroAction.Attack(hero, monster);
-        }
         public void CheckInfoForHero(BaseHero hero)
         {
             HeroAction.CheckInfoForHero(hero);
@@ -38,6 +33,13 @@ namespace Heroes.Models
         public void GetBigPotion(BaseHero hero)
         {
             HeroAction.GetBigPotion(hero);
+        }
+        private void CheckHP(BaseHero hero)
+        {
+            if (hero.HP)
+            {
+
+            }
         }
 
     }

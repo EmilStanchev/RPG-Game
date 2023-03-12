@@ -2,10 +2,14 @@
 {
     public class Archer : BaseHero
     {
+        private double _maxStrength { get; set; } = 5;
+        private double _maxHP { get; set; } = 90;
+
         public Archer(string name) : base(name)
         {
-            this.Strength = 35;
-            this.HP = 90;
+            this.Strength = _maxStrength;
+            this.HP = _maxHP;
         }
+
     }
 }

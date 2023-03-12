@@ -48,6 +48,14 @@
             Console.WriteLine("3. Bear");
             Console.WriteLine("4. Dragon");
             Console.WriteLine("5. Exit");
+        }
+        public static void ShopText()
+        {
+            Console.WriteLine("Shop: ");
+            Console.WriteLine("1. Buy potion ");
+            Console.WriteLine("2. Buy sword ");
+            Console.WriteLine("3. Buy shield ");
+            Console.WriteLine("4. Exit");
 
         }
     }

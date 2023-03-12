@@ -1,5 +1,4 @@
-﻿using Heroes.Models;
-using Monsters.Models;
+﻿using Monsters.Models;
 
 namespace Actions
 {
@@ -15,10 +14,6 @@ namespace Actions
             Monster dragon = new Monster("Dragon", 76, 230, 66, 40);
             List<Monster> monsters = new List<Monster>() { rat, wolf, bear, druid, snake, dragon };
             return monsters;
-        }
-        public static List<BaseHero> Heroes(List<BaseHero> heroes)
-        {
-            return heroes;
         }
     }
 }
