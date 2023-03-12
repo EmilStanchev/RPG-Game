@@ -56,7 +56,6 @@
             Console.WriteLine("2. Buy sword ");
             Console.WriteLine("3. Buy shield ");
             Console.WriteLine("4. Exit");
-
         }
     }
 }

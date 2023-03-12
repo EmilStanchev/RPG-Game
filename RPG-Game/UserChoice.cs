@@ -98,18 +98,12 @@ namespace RPG_Game
                         HeroAction.Attack(hero, monster);
                         break;
                     case 2:
-                        HeroAction.GetSmallPotion(hero);
+
                         break;
                     case 3:
-                        HeroAction.GetMediumPotion(hero);
-                        break;
-                    case 4:
-                        HeroAction.GetBigPotion(hero);
-                        break;
-                    case 5:
                         HeroAction.CheckInfoForHero(hero);
                         break;
-                    case 6:
+                    case 4:
                         Environment.Exit(0);
                         break;
                 }
